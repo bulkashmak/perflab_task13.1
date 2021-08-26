@@ -28,7 +28,14 @@ public class Utility {
             linesFromQuestions.add(lineFromQuestions);
         }
 
-        Fil
+        FileWriter fileWriter = new FileWriter(
+                String.format("files/вопросы-%s.txt", LocalDate.now()),
+                false);
+
+        Random random = new Random();
+        int tmp = 0;
+        String dataToWrite;
+        for (String lineS : linesFromStudents) {
 
             tmp = random.nextInt(linesFromQuestions.size());
             dataToWrite = lineS +" | "+ linesFromQuestions.get(tmp);
