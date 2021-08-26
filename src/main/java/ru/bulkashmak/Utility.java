@@ -38,15 +38,10 @@ public class Utility {
         for (String lineS : linesFromStudents) {
 
             tmp = random.nextInt(linesFromQuestions.size());
-            dataToWrite = lineS +" | "+ linesFromQuestions.get(tmp);
+            dataToWrite = lineS +" | "+ linesFromQuestions.get(tmp)+"\n";
             fileWriter.write(dataToWrite);
             linesFromQuestions.remove(tmp);
         }
-
-
-//        FileWriter fr = new FileWriter("myhappyfile1.txt", false);
-//        String dataToWrite = "Проверка на запись 123132 fdgsdgsd latin";
-//        fr.write(dataToWrite);
-//        fr.close();
+        fileWriter.close();
     }
 }
